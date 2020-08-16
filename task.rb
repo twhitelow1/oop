@@ -5,6 +5,14 @@ class Task
     @complete = false
   end
 
+  def toggle_complete!
+    if @complete == false
+      @complete = true
+    else
+      @complete = false
+    end
+  end
+
   def name
     return @name
   end

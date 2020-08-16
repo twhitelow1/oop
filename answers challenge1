@@ -1,0 +1,13 @@
+Line 5 creates a new list object using the imported list class from list.rb
+when this new instance of the list class is created it creates a single instace variable
+called task. The data type of that instance varaible is an array which contains a list of task.
+The whole class interacts with this array of task
+
+Line 8 uses the add_task method on the created list object and adds a task object to the list array that
+list object represents.
+
+Line 14 uses puts to display what is returned by "list.tasks[1].name". list.tasks[1].name uses dot notation
+to access the tasks array that is returned by list.tasks. Then using bracket notation "tasks[1]" the program selects the
+second task object in the tasks array retruned by list.tasks. Now that the program has the selected task object instance
+the program uses dot notation to access the name of the task with "task[1].name"
+ that contains each tasks instance that reprmethod of the tasks object
