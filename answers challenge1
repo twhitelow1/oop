@@ -63,3 +63,23 @@ Probably easier when used in a smaller program that isn't very complex
       i -= 1
     end
   end
+
+  8) 
+  a.)  def priority
+    @priority
+  end
+
+  def priority=(num)
+    @priority = num
+  end
+
+  set priority in initialize constructor
+
+  b.)  
+  def sort_by_priority
+    @tasks.sort!{|a,b| a.priority <=> b.priority}
+  end
+
+  The Song List App
+
+  

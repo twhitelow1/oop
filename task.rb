@@ -18,6 +18,10 @@ class Task
     @priority
   end
 
+  def priority=(num)
+    @priority = num
+  end
+
   def name
     return @name
   end

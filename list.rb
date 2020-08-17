@@ -22,22 +22,19 @@ class List
   end
 
   def delete_complete_tasks
-    # i_to_delete = []
-    # for i in 0...@tasks.length 
-    #   puts @tasks[i].complete
-    #   if @tasks[i].complete == true
-    #      i_to_delete << i
-    #   end
-    # end
     i = @tasks.length - 1
     while i >= 0 do
       if @tasks[i].complete
-          deleted_name = @tasks[i].name
+          # deleted_name = @tasks[i].name
           @tasks.delete_at(i)
-        #  puts "#{deleted_name} is deleted"
+          #  puts "#{deleted_name} is deleted"
        end
       i -= 1
     end
+  end
+
+  def sort_by_priority
+    @tasks.sort!{|a,b| a.priority <=> b.priority}
   end
 
   def show_all_tasks
