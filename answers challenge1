@@ -1,3 +1,4 @@
+3)
 Line 5 creates a new list object using the imported list class from list.rb
 when this new instance of the list class is created it creates a single instace variable
 called task. The data type of that instance varaible is an array which contains a list of task.
@@ -9,5 +10,56 @@ list object represents.
 Line 14 uses puts to display what is returned by "list.tasks[1].name". list.tasks[1].name uses dot notation
 to access the tasks array that is returned by list.tasks. Then using bracket notation "tasks[1]" the program selects the
 second task object in the tasks array retruned by list.tasks. Now that the program has the selected task object instance
-the program uses dot notation to access the name of the task with "task[1].name"
+the program uses dot notation to access the name of the task with "task[1].name"    
  that contains each tasks instance that reprmethod of the tasks object
+
+Line 31 uses "list.tasks[0].complete!" to access the set the task as completed. How is works is it uses dot nation 
+to access the task from the list of task and set it to complete. It grabs the list of task variable "list"
+and uses the dot notation to call the tasks method that returns an array of tasks. that tasks array is accessed
+by bracket notation to select the first task which has the index of 0. Since the data at each index of the tasks
+array is an object the program uses dot notation to access the complete! method to change the complete 
+property of the selected task instance to true.
+
+
+
+4) Answer the following questions: 
+a. In your opinion, what advantages does oop_todo have over procedural_todo? 
+oop_todo has the advange of having easy to read modular code to create the same output
+
+b. In your opinion, what advantages does procedural_todo have over oop_todo?
+
+procedural has the advantage of being easy to ready straight through in an orderly sense.
+Probably easier when used in a smaller program that isn't very complex
+
+5) Method added to task.rb
+  def toggle_complete!
+    if @complete == false
+      @complete = true
+    else
+      @complete = false
+    end
+  end
+
+  6) Method Added to list.rb
+    def number_of_incomplete_tasks
+    tasks_count = 0
+    @tasks.each do |task|
+      unless task.complete
+        tasks_count += 1
+      end
+    end
+    return tasks_count
+  end
+
+7) Method added to list.rb
+ def delete_complete_tasks
+    i = @tasks.length - 1
+    while i >= 0 do
+      if @tasks[i].complete
+          # deleted_name = @tasks[i].name
+          @tasks.delete_at(i)
+          #  puts "#{deleted_name} is deleted"
+       end
+      i -= 1
+    end
+  end

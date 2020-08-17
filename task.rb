@@ -1,8 +1,9 @@
 class Task
   
-  def initialize(name)
+  def initialize(name, priority)
     @name = name
     @complete = false
+    @priority = priority
   end
 
   def toggle_complete!
@@ -13,9 +14,14 @@ class Task
     end
   end
 
+  def priority
+    @priority
+  end
+
   def name
     return @name
   end
+
 
   def complete
     return @complete

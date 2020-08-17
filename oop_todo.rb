@@ -16,19 +16,16 @@ puts "---------"
 
 # Get an array containing the names of all incomplete tasks from the list
 puts "Incomplete Tasks:"
+#puts list.number_of_incomplete_tasks
 puts list.incomplete_task_names
 puts "--------"
 
 
 
-
-
-
-
-
-
 # Mark the first task from the list as complete
 list.tasks[0].complete!
+list.delete_complete_tasks
+
 
 # Print out the incomplete tasks again
 puts "Incomplete Tasks:"
