@@ -1,38 +1,4 @@
-class Song
-    def initialize(title, artist, duration, lyrics)
-        @title = title
-        @artist = artist
-        @duration = duration
-        @lyrics = lyrics
-    end
 
-    def title
-         @title
-    end
-
-    def artist
-        @artist
-    end
-
-    def duration
-        @duration
-    end
-
-    def lyrics
-        @lyrics
-    end
-
-    def play
-        `say #{@lyrics}` 
-    end
-
-    def friendly_duration
-        mins = (@duration / 60)
-        secs =  (@duration % 60)
-        return "#{mins} minutes, #{secs} seconds"
-    end
-
-end
 
 song1 = Song.new("Three Little Songs", 
     "Bob Marley", 
